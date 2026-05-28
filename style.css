@@ -5,8 +5,8 @@
     --purple: #7C3AED;
     --pink: #EC4899;
     --orange: #F97316;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.3);
     --radius: 12px;
     --shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
@@ -15,6 +15,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -55,6 +59,7 @@ header {
     padding: 20px 0;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 nav {
@@ -71,16 +76,17 @@ nav {
 .nav-cta {
     background: var(--slate);
     color: var(--white);
-    padding: 10px 24px;
+    padding: 12px 28px;
     border-radius: var(--radius);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .nav-cta:hover {
     transform: translateY(-2px);
+    background: #1e293b;
 }
 
 /* Hero Section */
@@ -125,7 +131,7 @@ nav {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 72px;
     margin-bottom: 24px;
 }
 
@@ -144,53 +150,55 @@ h1 {
 
 /* Waitlist Card */
 .waitlist-card {
-    padding: 32px;
+    padding: 40px;
     background: #fff;
-    max-width: 480px;
+    max-width: 500px;
+    border: 1px solid #e2e8f0;
 }
 
 .waitlist-card h3 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 12px;
 }
 
 .waitlist-card p {
-    font-size: 15px;
+    font-size: 16px;
     color: #64748b;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 #waitlist-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 input {
     width: 100%;
-    padding: 14px 18px;
+    padding: 16px 20px;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 16px;
     outline: none;
-    transition: border-color 0.2s;
+    transition: all 0.2s;
 }
 
 input:focus {
     border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
 button {
     background: var(--slate);
     color: var(--white);
     border: none;
-    padding: 16px;
+    padding: 18px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    transition: all 0.2s;
 }
 
 button:hover {
@@ -204,18 +212,18 @@ button:disabled {
 }
 
 .signup-counter {
-    margin-top: 20px;
+    margin-top: 24px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 500;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
     color: #64748b;
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background: #22c55e;
     border-radius: 50%;
     animation: pulse 2s infinite;
@@ -233,30 +241,32 @@ button:disabled {
 }
 
 .image-container {
-    padding: 12px;
-    border-radius: 20px;
+    padding: 16px;
+    border-radius: 24px;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 16px;
     display: block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* Features */
 .features {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .section-header h2 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 16px;
 }
 
@@ -267,29 +277,31 @@ button:disabled {
 }
 
 .feature-card {
-    padding: 40px;
+    padding: 48px;
     text-align: center;
     background: var(--gray-soft);
     border: none;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
+    background: var(--white);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 24px;
 }
 
 .feature-card h3 {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 16px;
 }
 
 .feature-card p {
-    font-size: 15px;
+    font-size: 16px;
     color: #64748b;
 }
 
@@ -300,35 +312,36 @@ button:disabled {
 
 .experience-content {
     background: linear-gradient(135deg, var(--slate), #1e293b);
-    padding: 80px;
+    padding: 100px 80px;
     color: var(--white);
-    border-radius: 24px;
+    border-radius: 32px;
 }
 
 .experience-text h2 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 24px;
 }
 
 .experience-text p {
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.9;
-    margin-bottom: 32px;
-    max-width: 700px;
+    margin-bottom: 40px;
+    max-width: 800px;
 }
 
 .experience-list {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
 }
 
 .experience-list li {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     font-weight: 500;
+    font-size: 18px;
 }
 
 .experience-list li::before {
@@ -339,7 +352,7 @@ button:disabled {
 
 /* Footer */
 footer {
-    padding: 60px 0;
+    padding: 80px 0;
     border-top: 1px solid #e2e8f0;
 }
 
@@ -352,24 +365,32 @@ footer {
 .footer-brand p {
     font-size: 14px;
     color: #64748b;
-    margin-top: 8px;
+    margin-top: 12px;
+}
+
+.footer-links {
+    text-align: right;
 }
 
 .footer-links p {
     font-size: 14px;
     color: #64748b;
-    max-width: 300px;
-    text-align: right;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    opacity: 0.6;
 }
 
 .hidden { display: none; }
 
 #form-message {
-    padding: 12px;
+    padding: 16px;
     border-radius: 8px;
-    font-size: 14px;
-    margin-top: 12px;
+    font-size: 15px;
+    margin-top: 16px;
     text-align: center;
+    font-weight: 500;
 }
 
 #form-message.success {
@@ -383,7 +404,13 @@ footer {
 }
 
 /* Mobile */
+@media (max-width: 1024px) {
+    h1 { font-size: 56px; }
+    .hero-grid { gap: 40px; }
+}
+
 @media (max-width: 968px) {
+    .hero { padding: 120px 0 60px; }
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -395,11 +422,19 @@ footer {
         align-items: center;
     }
     
-    h1 { font-size: 48px; }
+    .lead { margin-left: auto; margin-right: auto; }
     
     .feature-grid { grid-template-columns: 1fr; }
     
-    .experience-content { padding: 40px; }
+    .experience-content { padding: 60px 40px; }
     
     .experience-list { grid-template-columns: 1fr; }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+    
+    .footer-links { text-align: center; }
 }
