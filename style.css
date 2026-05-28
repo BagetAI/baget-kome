@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo {
+h1, h2, h3, h4, .logo {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     line-height: 1.1;
@@ -71,6 +71,17 @@ nav {
 .logo {
     font-size: 24px;
     letter-spacing: 2px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--slate);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--purple);
 }
 
 .nav-cta {
@@ -305,6 +316,89 @@ button:disabled {
     color: #64748b;
 }
 
+/* Menu Section */
+.menu {
+    padding: 40px 0 100px;
+}
+
+.menu .section-header {
+    margin-bottom: 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.menu-category {
+    padding: 40px;
+}
+
+.menu-category h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--slate);
+}
+
+.menu-note {
+    font-size: 15px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.menu-item-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--slate);
+}
+
+.menu-item-header .price {
+    font-weight: 600;
+    color: var(--purple);
+}
+
+.menu-items p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.sake-pairing {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px dashed var(--glass-border);
+}
+
+.sake-pairing h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--purple);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.sake-pairing p {
+    font-size: 15px;
+    color: #64748b;
+}
+
 /* Experience Section */
 .experience {
     padding: 60px 0 120px;
@@ -425,6 +519,8 @@ footer {
     .lead { margin-left: auto; margin-right: auto; }
     
     .feature-grid { grid-template-columns: 1fr; }
+    
+    .menu-grid { grid-template-columns: 1fr; }
     
     .experience-content { padding: 60px 40px; }
     
