@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOME | The Art of Warm Rice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">KOME</div>
+            <a href="#waitlist" class="nav-cta">Reserve Early</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="mesh-gradient"></div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">Paris Launch 2026</span>
+                    <h1>The Art of <br><span class="highlight">Warm Rice</span></h1>
+                    <p class="lead">12 Seats. 40°C. One Niigata Journey. Experience the theatricality of hand-pressed onigiri omakase in the heart of Paris.</p>
+                    
+                    <div class="waitlist-card glass" id="waitlist">
+                        <h3>Join the Private Tasting</h3>
+                        <p>Be the first to experience the "Golden 40°C" sensory journey. No plastic, no shortcuts.</p>
+                        <form id="waitlist-form">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <button type="submit" id="submit-btn">Get Early Access</button>
+                        </form>
+                        <div id="form-message" class="hidden"></div>
+                        <div class="signup-counter">
+                            <span class="dot"></span>
+                            <span id="counter-text">Join 0 others on the waitlist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container glass">
+                        <img src="images/close-up-of-a-chef-s-hands-delicately-pr.png" alt="Chef hand-pressing warm onigiri">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features container">
+            <div class="section-header">
+                <h2>The Sensory Moat</h2>
+                <p>KOME disrupts the onigiri status quo by returning to the craft's roots.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card glass">
+                    <div class="icon">🌾</div>
+                    <h3>Niigata Provenance</h3>
+                    <p>Exclusively serving "Uonuma Grade" Koshihikari rice, sourced directly from Niigata cooperatives.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="icon">🔥</div>
+                    <h3>The Golden 40°C</h3>
+                    <p>Rice served at the precise temperature where umami is maximized. Hand-pressed on demand.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="icon">🍶</div>
+                    <h3>Sake Pairing</h3>
+                    <p>Curated Niigata labels from Hakkaisan to Kubota, paired to enhance every bite.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience container">
+            <div class="experience-content glass">
+                <div class="experience-text">
+                    <h2>A Theatrical Evening</h2>
+                    <p>Our 12-seat bar in the 1er Arrondissement is designed for intimacy. Watch the chef's hands work as each onigiri is served on ceramic or washi paper—never plastic wrap.</p>
+                    <ul class="experience-list">
+                        <li>5 hand-pressed premium onigiri</li>
+                        <li>Seasonal otsumami appetizers</li>
+                        <li>Authentic Niigata sake flights</li>
+                        <li>Japanese Food Supporter certified</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">KOME</div>
+                <p>Paris • 2026</p>
+            </div>
+            <div class="footer-links">
+                <p>Recognized by JETRO as an official Japanese Food Supporter.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
